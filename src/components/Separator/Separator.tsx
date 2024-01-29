@@ -1,7 +1,9 @@
 import * as React from 'react';
+import { withPrefix } from 'gatsby';
 
 import { StyledSeparator } from './StyledSeparator';
 
 export const Separator: React.FC = () => {
-  return <StyledSeparator></StyledSeparator>;
+  const imgPath = withPrefix('/paw-print.png');
+  return <StyledSeparator $imgPath={imgPath} />;
 };
