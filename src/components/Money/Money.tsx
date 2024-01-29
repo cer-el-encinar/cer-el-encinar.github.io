@@ -24,14 +24,16 @@ export const Money: React.FC = () => {
           </Col>
           <Col md={4}>
             <h3>Bizum solidario</h3>
-            <StaticImage
-              src="../../images/bizum-logo.png"
-              placeholder="blurred"
-              alt="Bizum solidario"
-            />
-            <br />
-            <br />
-            Con el código 05885
+            <a href="https://bizum.es/donar-ong/" target="_blank">
+              <StaticImage
+                src="../../images/bizum-logo.png"
+                placeholder="blurred"
+                alt="Bizum solidario"
+              />
+              <br />
+              <br />
+              Con el código 05885
+            </a>
           </Col>
           <Col md={4}>
             <h3>Transferencia bancaria</h3>
