@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 type Props = {
-  inFooter: boolean;
+  $inFooter: boolean;
 };
 
 export const StyledSocial = styled.div<Props>`
@@ -14,5 +14,5 @@ export const StyledSocial = styled.div<Props>`
       margin: 1rem 2rem;
     }
   }
-  ${({ inFooter }) => (inFooter ? '' : 'margin-bottom: 8rem;')}
+  ${({ $inFooter }) => ($inFooter ? '' : 'margin-bottom: 8rem;')}
 `;

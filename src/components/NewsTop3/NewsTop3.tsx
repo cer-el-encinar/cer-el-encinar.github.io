@@ -14,7 +14,7 @@ export const NewsTop3: React.FC<Props> = ({ news }) => {
     <Container fluid>
       <Row gutterWidth={16}>
         {news.map((item) => (
-          <Col md={4}>
+          <Col md={4} key={item.frontmatter.slug}>
             <Link to={`/noticias/${item.frontmatter.slug}/`}>
               <Card>
                 <Card.Image

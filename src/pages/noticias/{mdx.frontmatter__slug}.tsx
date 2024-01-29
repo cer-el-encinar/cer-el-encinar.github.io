@@ -11,7 +11,6 @@ type Data = {
 
 const NoticiaPage: React.FC<PageProps> = ({ data }) => {
   const { body, frontmatter } = (data as Data).mdx;
-  console.log(frontmatter);
   return (
     <Layout>
       <Contained>

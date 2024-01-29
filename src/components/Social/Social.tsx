@@ -4,13 +4,13 @@ import { IconContext } from 'react-icons';
 
 import { StyledSocial } from './StyledSocial';
 
-interface Props {
+type Props = {
   inFooter?: boolean;
 }
 
 export const Social: React.FC<Props> = ({ inFooter = false }) => {
   return (
-    <StyledSocial inFooter={inFooter}>
+    <StyledSocial $inFooter={inFooter}>
       <IconContext.Provider
         value={{
           size: inFooter ? '1rem' : '64px',
