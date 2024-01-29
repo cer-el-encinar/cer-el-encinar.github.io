@@ -4,6 +4,8 @@ export * from './Contained';
 export * from './Footer';
 export * from './Header';
 export * from './Layout';
+export * from './Money';
 export * from './NewsTop3';
 export * from './Separator';
+export * from './Social';
 export * from './Statement';

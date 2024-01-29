@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { type HeadFC, type PageProps } from 'gatsby';
 
-import { Contained, Layout } from '../components';
+import { Contained, Layout, Social, Statement } from '../components';
 
 const AyudarPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <Contained>
-        <h2>Como puedes ayudar</h2>
-        <h3>Alguna vez te has planteado alguna de estas cuestiones?</h3>
+        <Statement>Contacto</Statement>
+        <Social />
       </Contained>
     </Layout>
   );
@@ -16,4 +16,4 @@ const AyudarPage: React.FC<PageProps> = () => {
 
 export default AyudarPage;
 
-export const Head: HeadFC = () => <title>CER El Encinar - Ayudar</title>;
+export const Head: HeadFC = () => <title>CER El Encinar - Contacto</title>;

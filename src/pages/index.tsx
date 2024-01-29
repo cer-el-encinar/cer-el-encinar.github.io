@@ -6,6 +6,7 @@ import {
   CallToAction,
   Contained,
   Layout,
+  Money,
   NewsTop3,
   Separator,
   Statement,
@@ -23,34 +24,27 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   const news = (data as Data).allMdx.nodes;
   return (
     <Layout>
-      <Separator />
       <Contained>
         <Statement>
           Somos una asociación que se dedica a la Captura, Esterilización y
           Retorno (CER) de animales en el entorno de la urbanización del Encinar
           del Alberche
+          <br />
+          <br />
+          <Link to="/nosotros/">Cónocenos...</Link>
         </Statement>
+      </Contained>
+      <Separator />
+      <Contained>
         <NewsTop3 news={news} />
+      </Contained>
+      <Separator />
+      <Contained>
+        <Money />
         <CallToAction>
-          <a href="https://www.teaming.net/cerelencinar" target="_blank">
-            <StaticImage
-              src="../images/latasolidariamini.png"
-              placeholder="blurred"
-              alt="La lata solidaria"
-            />
-          </a>
+          Encuentra estas y otras formas de colaborar
           <br />
-          <br />
-          Puedes donar a través de{' '}
-          <a href="https://www.teaming.net/cerelencinar" target="_blank">
-            Teaming
-          </a>
-          , Bizum solidario con el código 05885 o Transferencia bancaria
-          <br />
-          <br />
-          Encuentra estas y muchas otras formas de ayudar
-          <br />
-          <Link to="/ayudar/">
+          <Link to="/colabora/">
             <FaHandsHelping style={{ verticalAlign: 'bottom' }} /> aquí
           </Link>
         </CallToAction>

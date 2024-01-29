@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
+import { Social } from '../Social';
+
 import {
   StyledFooter,
   StyledFooterBottom,
@@ -19,7 +21,11 @@ export const Footer: React.FC = () => {
         />
       </StyledFooterImage>
       <StyledFooterBottom>
-        <StyledFooterContent>&copy; CER El Encinar</StyledFooterContent>
+        <StyledFooterContent>
+          <Social inFooter />
+          <br />
+          <p style={{ textAlign: 'center' }}>&copy; CER El Encinar</p>
+        </StyledFooterContent>
       </StyledFooterBottom>
     </StyledFooter>
   );

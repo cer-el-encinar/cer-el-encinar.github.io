@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledFooter = styled.div`
-  margin-top: 1rem;
+  margin-top: 8rem;
 `;
 
 export const StyledFooterBottom = styled.div`
@@ -15,6 +15,22 @@ export const StyledFooterContent = styled.div`
   background: black;
   font-size: 1.2rem;
   color: #ccc;
+  a {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      text-align: center;
+      line-height: 3rem;
+      margin: 1rem 2rem;
+    }
+  }
 `;
 
 export const StyledFooterImage = styled.div`

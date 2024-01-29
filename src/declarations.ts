@@ -8,4 +8,5 @@ export type News = {
     slug: string;
   };
   excerpt: string;
+  body: string;
 };
