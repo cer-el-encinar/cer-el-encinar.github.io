@@ -11,6 +11,7 @@ import {
   Statement,
 } from '../components';
 import type { News } from '../declarations';
+import { StaticImage } from 'gatsby-plugin-image';
 
 type Data = {
   allMdx: {
@@ -31,6 +32,15 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
         </Statement>
         <NewsTop3 news={news} />
         <CallToAction>
+          <a href="https://www.teaming.net/cerelencinar" target="_blank">
+            <StaticImage
+              src="../images/latasolidariamini.png"
+              placeholder="blurred"
+              alt="La lata solidaria"
+            />
+          </a>
+          <br />
+          <br />
           Puedes donar a través de{' '}
           <a href="https://www.teaming.net/cerelencinar" target="_blank">
             Teaming
