@@ -21,6 +21,14 @@ export const Footer: React.FC = () => (
     </StyledFooterImage>
     <StyledFooterBottom>
       <StyledFooterContent>
+        <div style={{ textAlign: 'center', margin: '4rem 0' }}>
+          <StaticImage
+            src="../../images/ministerio.jpg"
+            placeholder="none"
+            alt="Ministerio de derechos sociales, consumo y agenda"
+          />
+        </div>
+        <br />
         <Social inFooter />
         <br />
         <p style={{ textAlign: 'center' }}>&copy; CER El Encinar</p>
