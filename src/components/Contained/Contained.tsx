@@ -6,6 +6,6 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const Contained: React.FC<Props> = ({ children }) => {
-  return <StyledContained>{children}</StyledContained>;
-};
+export const Contained: React.FC<Props> = ({ children }) => (
+  <StyledContained>{children}</StyledContained>
+);

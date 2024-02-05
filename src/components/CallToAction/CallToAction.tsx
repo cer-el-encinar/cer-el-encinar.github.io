@@ -6,6 +6,6 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const CallToAction: React.FC<Props> = ({ children }) => {
-  return <StyledCallToAction>{children}</StyledCallToAction>;
-};
+export const CallToAction: React.FC<Props> = ({ children }) => (
+  <StyledCallToAction>{children}</StyledCallToAction>
+);

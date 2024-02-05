@@ -2,50 +2,38 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import { StyledHeader, StyledHeaderInner } from './StyledHeader';
+import {
+  StyledHeader,
+  StyledHeaderInner,
+  StyledHeaderMobile,
+} from './StyledHeader';
+import { useScroll } from '../../hook';
+import { Menu, MenuButton } from './components';
 
 export const Header = () => {
-  const [hasScrolled, setHasScrolled] = React.useState(false);
-  React.useEffect(() => {
-    setHasScrolled(window.scrollY > 0);
-    const fn = () => {
-      const nextValue = window.scrollY > 0;
-      if (nextValue !== hasScrolled) {
-        setHasScrolled(window.scrollY > 0);
-      }
-    };
-    window.addEventListener('scroll', fn);
-    return () => {
-      window.removeEventListener('scroll', fn);
-    };
-  }, [hasScrolled]);
+  const { hasScrolled } = useScroll();
+  const [isOpen, setIsOpen] = React.useState(false);
   return (
-    <StyledHeader $hasScrolled={hasScrolled}>
+    <StyledHeader $hasScrolled={hasScrolled} isOpen={isOpen}>
       <StyledHeaderInner $hasScrolled={hasScrolled}>
         <nav>
-          <ul>
-            <li>
-              <Link to="/nosotros/">Nosotros</Link>
-            </li>
-            <li>
-              <Link to="/colabora/">Colabora</Link>
-            </li>
-            <li>
-              <Link to="/">
-                <StaticImage
-                  src="../../images/logo128.png"
-                  placeholder="blurred"
-                  alt="CER El Encinar"
-                />
-              </Link>
-            </li>
-            <li>
-              <Link to="/noticias/">Noticias</Link>
-            </li>
-            <li>
-              <Link to="/contacto/">Contacto</Link>
-            </li>
-          </ul>
+          <StyledHeaderMobile>
+            <Link to="/">
+              <StaticImage
+                src="../../images/logo128.png"
+                placeholder="none"
+                alt="CER El Encinar"
+                width={64}
+              />
+            </Link>
+            <MenuButton
+              isOpen={isOpen}
+              toggle={() => {
+                setIsOpen((prev) => !prev);
+              }}
+            />
+          </StyledHeaderMobile>
+          <Menu isOpen={isOpen} hasScrolled={hasScrolled} />
         </nav>
       </StyledHeaderInner>
     </StyledHeader>

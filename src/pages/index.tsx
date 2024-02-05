@@ -1,18 +1,10 @@
 import * as React from 'react';
 import { Link, type HeadFC, type PageProps, graphql } from 'gatsby';
-import { FaHandsHelping } from 'react-icons/fa';
-
-import {
-  CallToAction,
-  Contained,
-  Layout,
-  Money,
-  NewsTop3,
-  Separator,
-  Statement,
-} from '../components';
-import type { News } from '../declarations';
 import { StaticImage } from 'gatsby-plugin-image';
+import { Col, Container, Row } from 'react-grid-system';
+
+import { CallToAction, Donations, Hero, Layout, NewsTop3 } from '../components';
+import type { News } from '../declarations';
 
 type Data = {
   allMdx: {
@@ -24,31 +16,38 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   const news = (data as Data).allMdx.nodes;
   return (
     <Layout>
-      <Contained>
-        <Statement>
-          Somos una asociación que se dedica a la Captura, Esterilización y
-          Retorno (CER) de animales en el entorno de la urbanización del Encinar
-          del Alberche
-          <br />
-          <br />
-          <Link to="/nosotros/">Cónocenos...</Link>
-        </Statement>
-      </Contained>
-      <Separator />
-      <Contained>
-        <NewsTop3 news={news} />
-      </Contained>
-      <Separator />
-      <Contained>
-        <Money />
+      <Hero>
+        <Container>
+          <Row nogutter>
+            <Col sm={6} style={{ alignSelf: 'center', marginBottom: '4rem' }}>
+              <p>
+                Somos una asociación que se dedica a la Captura, Esterilización
+                y Retorno (CER) de animales en el entorno de la urbanización del
+                Encinar del Alberche
+              </p>
+              <Link to="/nosotros/">Cónocenos...</Link>
+            </Col>
+            <Col sm={6} style={{ textAlign: 'center' }}>
+              <StaticImage
+                src="../images/cat01.png"
+                placeholder="none"
+                alt="CER"
+              />
+            </Col>
+          </Row>
+        </Container>
+      </Hero>
+      <Hero>
+        <Hero.Title>Colabora con nosotros</Hero.Title>
+        <Donations />
         <CallToAction>
-          Encuentra estas y otras formas de colaborar
-          <br />
-          <Link to="/colabora/">
-            <FaHandsHelping style={{ verticalAlign: 'bottom' }} /> aquí
-          </Link>
+          <Link to="/colabora/">Más formas de colaborar aquí...</Link>
         </CallToAction>
-      </Contained>
+      </Hero>
+      <Hero>
+        <Hero.Title>Últimas noticias</Hero.Title>
+        <NewsTop3 news={news} />
+      </Hero>
     </Layout>
   );
 };

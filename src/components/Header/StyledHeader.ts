@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 type Props = {
   $hasScrolled: boolean;
+  isOpen?: boolean;
 };
 
 export const StyledHeader = styled.header<Props>`
@@ -11,33 +12,36 @@ export const StyledHeader = styled.header<Props>`
   background: #fff;
   z-index: 100;
   transition: transform 0.2s;
-  .gatsby-image-wrapper {
-    transition: transform 0.2s;
-  }
-  ${({ $hasScrolled }) =>
-    $hasScrolled &&
+  ${({ $hasScrolled, isOpen }) =>
+    ($hasScrolled || isOpen) &&
     css`
-      box-shadow: 0 0.5rem 1rem rgba(0, 126, 167, 0.3);
-      .gatsby-image-wrapper {
-        transform: scale(0.5);
-      }
+      box-shadow: 0 0.2rem 0.5rem rgba(0, 126, 167, 0.3);
     `}
 `;
 
 export const StyledHeaderInner = styled.div<Props>`
-  width: 980px;
+  max-width: 980px;
   transition: transform 0.2s;
+
   margin: ${({ $hasScrolled }) => ($hasScrolled ? '0' : '2rem')} auto;
-  nav {
-    ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      li {
-        list-item: none;
-        display: inline-block;
-        font-size: 2rem;
-      }
+  @media screen and (max-width: 1024px) {
+    & {
+      margin: ${({ $hasScrolled }) => ($hasScrolled ? '0' : '2rem')} 2rem;
     }
   }
+  @media screen and (max-width: 820px) {
+    & {
+      margin: 0 2rem;
+    }
+  }
+`;
+
+export const StyledHeaderMobile = styled.div`
+  display: none;
+  height: 128px;
+  @media screen and (max-width: 820px) {
+    display: flex;
+  }
+  align-items: center;
+  justify-content: space-between;
 `;

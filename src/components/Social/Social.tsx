@@ -1,48 +1,46 @@
 import * as React from 'react';
 import { FaEnvelope, FaFacebook, FaInstagram } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
+import { Col, Container, Row } from 'react-grid-system';
 
 import { StyledSocial } from './StyledSocial';
 
 type Props = {
   inFooter?: boolean;
-}
+};
 
-export const Social: React.FC<Props> = ({ inFooter = false }) => {
-  return (
-    <StyledSocial $inFooter={inFooter}>
-      <IconContext.Provider
-        value={{
-          size: inFooter ? '1rem' : '64px',
-          style: {
-            verticalAlign: 'bottom',
-          },
-        }}
-      >
-        <ul>
-          <li>
+export const Social: React.FC<Props> = ({ inFooter = false }) => (
+  <StyledSocial $inFooter={inFooter}>
+    <IconContext.Provider
+      value={{
+        size: inFooter ? '1rem' : '64px',
+        style: {
+          verticalAlign: 'bottom',
+        },
+      }}
+    >
+      <Container>
+        <Row>
+          <Col md={4} style={{ marginBottom: '2rem' }}>
             <a href="https://instagram.com/cerelencinar" target="_blank">
               <FaInstagram />
-              <br />
               cerelencinar
             </a>
-          </li>
-          <li>
+          </Col>
+          <Col md={4} style={{ marginBottom: '2rem' }}>
             <a href="https://facebook.com/CERELENCINAR" target="_blank">
               <FaFacebook />
-              <br />
               CERELENCINAR
             </a>
-          </li>
-          <li>
+          </Col>
+          <Col md={4} style={{ marginBottom: '2rem' }}>
             <a href="emailto:cerelencinar@gmail.com">
               <FaEnvelope />
-              <br />
               cerelencinar@gmail.com
             </a>
-          </li>
-        </ul>
-      </IconContext.Provider>
-    </StyledSocial>
-  );
-};
+          </Col>
+        </Row>
+      </Container>
+    </IconContext.Provider>
+  </StyledSocial>
+);

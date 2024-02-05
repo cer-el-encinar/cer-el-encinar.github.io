@@ -6,6 +6,6 @@ interface Props {
   children: React.ReactNode;
 }
 
-export const Content: React.FC<Props> = ({ children }) => {
-  return <StyledContent>{children}</StyledContent>;
-};
+export const Content: React.FC<Props> = ({ children }) => (
+  <StyledContent>{children}</StyledContent>
+);

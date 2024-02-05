@@ -3,7 +3,7 @@ import { HeadFC, PageProps, graphql } from 'gatsby';
 
 import { Layout } from '../../components/Layout';
 import { News } from '../../declarations';
-import { Contained, Statement } from '../../components';
+import { Contained, Hero } from '../../components';
 
 type Data = {
   mdx: News;
@@ -13,10 +13,10 @@ const NoticiaPage: React.FC<PageProps> = ({ data }) => {
   const { body, frontmatter } = (data as Data).mdx;
   return (
     <Layout>
-      <Contained>
-        <Statement>{frontmatter.title}</Statement>
-        {body}
-      </Contained>
+      <Hero>
+        <Hero.Title>{frontmatter.title}</Hero.Title>
+      </Hero>
+      <Contained>{body}</Contained>
     </Layout>
   );
 };

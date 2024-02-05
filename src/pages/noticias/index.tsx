@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { type HeadFC, type PageProps, graphql } from 'gatsby';
 
-import { Contained, Layout, NewsTop3, Statement } from '../../components';
+import { Contained, Hero, Layout, NewsTop3 } from '../../components';
 import type { News } from '../../declarations';
 
 type Data = {
@@ -14,8 +14,11 @@ const NoticiasPage: React.FC<PageProps> = ({ data }) => {
   const news = (data as Data).allMdx.nodes;
   return (
     <Layout>
+      <Hero>
+        <Hero.Title>Noticias</Hero.Title>
+      </Hero>
+
       <Contained>
-        <Statement>Noticias</Statement>
         <NewsTop3 news={news} />
       </Contained>
     </Layout>
@@ -44,4 +47,4 @@ export const query = graphql`
   }
 `;
 
-export const Head: HeadFC = () => <title>Noticias del CER El Encinar</title>;
+export const Head: HeadFC = () => <title>CER El Encinar - Noticias</title>;

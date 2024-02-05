@@ -1,19 +1,20 @@
 import * as React from 'react';
 import { type HeadFC, type PageProps } from 'gatsby';
 
-import { Contained, Layout, Social, Statement } from '../components';
+import { Contained, Hero, Layout, Social } from '../components';
 
-const AyudarPage: React.FC<PageProps> = () => {
-  return (
-    <Layout>
-      <Contained>
-        <Statement>Contacto</Statement>
-        <Social />
-      </Contained>
-    </Layout>
-  );
-};
+const ContactoPage: React.FC<PageProps> = () => (
+  <Layout>
+    <Hero>
+      <Hero.Title>Contacto</Hero.Title>
+    </Hero>
 
-export default AyudarPage;
+    <Contained>
+      <Social />
+    </Contained>
+  </Layout>
+);
+
+export default ContactoPage;
 
 export const Head: HeadFC = () => <title>CER El Encinar - Contacto</title>;

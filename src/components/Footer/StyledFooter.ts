@@ -9,7 +9,7 @@ export const StyledFooterBottom = styled.div`
 `;
 
 export const StyledFooterContent = styled.div`
-  width: 980px;
+  max-width: 980px;
   margin: 0 auto;
   padding: 1rem 0;
   background: black;

@@ -5,14 +5,13 @@ type Props = {
 };
 
 export const StyledSocial = styled.div<Props>`
-  ul {
+  a {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    li {
-      text-align: center;
-      line-height: 3rem;
-      margin: 1rem 2rem;
-    }
+    line-height: 3rem;
+    margin: 1rem 2rem;
   }
   ${({ $inFooter }) => ($inFooter ? '' : 'margin-bottom: 8rem;')}
 `;

@@ -10,12 +10,10 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const Layout: React.FC<Props> = ({ children }) => {
-  return (
-    <StyledLayout>
-      <Header />
-      {children}
-      <Footer />
-    </StyledLayout>
-  );
-};
+export const Layout: React.FC<Props> = ({ children }) => (
+  <StyledLayout>
+    <Header />
+    {children}
+    <Footer />
+  </StyledLayout>
+);

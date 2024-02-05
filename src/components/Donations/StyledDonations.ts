@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const StyledMoney = styled.div`
+export const StyledDonations = styled.div`
   text-align: center;
 `;

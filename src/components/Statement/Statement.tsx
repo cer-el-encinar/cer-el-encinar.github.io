@@ -6,6 +6,6 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const Statement: React.FC<Props> = ({ children }) => {
-  return <StyledStatement>{children}</StyledStatement>;
-};
+export const Statement: React.FC<Props> = ({ children }) => (
+  <StyledStatement>{children}</StyledStatement>
+);
