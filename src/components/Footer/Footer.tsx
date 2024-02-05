@@ -22,11 +22,13 @@ export const Footer: React.FC = () => (
     <StyledFooterBottom>
       <StyledFooterContent>
         <div style={{ textAlign: 'center', margin: '4rem 0' }}>
-          <StaticImage
-            src="../../images/ministerio.jpg"
-            placeholder="none"
-            alt="Ministerio de derechos sociales, consumo y agenda"
-          />
+          <a href="https://www.mdsocialesa2030.gob.es/" target="_blank">
+            <StaticImage
+              src="../../images/ministerio.jpg"
+              placeholder="none"
+              alt="Ministerio de derechos sociales, consumo y agenda"
+            />
+          </a>
         </div>
         <br />
         <Social inFooter />
