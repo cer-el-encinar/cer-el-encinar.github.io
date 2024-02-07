@@ -61,7 +61,7 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    allMdx {
+    allMdx(sort: { frontmatter: { date: DESC } }, limit: 3) {
       nodes {
         frontmatter {
           cover {

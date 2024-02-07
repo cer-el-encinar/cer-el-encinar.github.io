@@ -26,7 +26,20 @@ const config: GatsbyConfig = {
         icon: 'src/images/favicon.png',
       },
     },
-    'gatsby-plugin-mdx',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 690,
+              wrapperStyle: 'margin-bottom: 2rem;',
+            },
+          },
+        ],
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

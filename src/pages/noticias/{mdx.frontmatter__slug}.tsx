@@ -1,22 +1,37 @@
 import React from 'react';
 import { HeadFC, PageProps, graphql } from 'gatsby';
+import {
+  GatsbyImage,
+  getImage,
+  type IGatsbyImageData,
+} from 'gatsby-plugin-image';
+import { MDXProvider } from '@mdx-js/react';
 
 import { Layout } from '../../components/Layout';
 import { News } from '../../declarations';
-import { Contained, Hero } from '../../components';
+import { Contained, Hero, Share } from '../../components';
 
 type Data = {
   mdx: News;
 };
 
-const NoticiaPage: React.FC<PageProps> = ({ data }) => {
-  const { body, frontmatter } = (data as Data).mdx;
+const NoticiaPage: React.FC<PageProps> = ({ data, children, location }) => {
+  const { frontmatter } = (data as Data).mdx;
+  const img = getImage(frontmatter.cover) as IGatsbyImageData;
   return (
     <Layout>
       <Hero>
         <Hero.Title>{frontmatter.title}</Hero.Title>
       </Hero>
-      <Contained>{body}</Contained>
+      <GatsbyImage
+        image={img}
+        alt={frontmatter.title}
+        style={{ marginBottom: '4rem' }}
+      />
+      <Contained>
+        <MDXProvider>{children}</MDXProvider>
+      </Contained>
+      <Share uri={location.href} />
     </Layout>
   );
 };
@@ -26,7 +41,6 @@ export default NoticiaPage;
 export const query = graphql`
   query ($id: String) {
     mdx(id: { eq: $id }) {
-      body
       frontmatter {
         title
         slug

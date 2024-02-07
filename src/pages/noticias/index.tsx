@@ -29,7 +29,7 @@ export default NoticiasPage;
 
 export const query = graphql`
   query {
-    allMdx {
+    allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
         frontmatter {
           cover {
