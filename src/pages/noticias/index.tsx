@@ -47,4 +47,10 @@ export const query = graphql`
   }
 `;
 
-export const Head: HeadFC = () => <title>CER El Encinar - Noticias</title>;
+export const Head: HeadFC = () => (
+  <>
+    <html lang="es" />
+    <title>CER El Encinar - Noticias</title>
+    <meta name="description" content="CER El Encinar" />
+  </>
+);

@@ -110,4 +110,10 @@ const NosotrosPage: React.FC<PageProps> = () => (
 
 export default NosotrosPage;
 
-export const Head: HeadFC = () => <title>CER El Encinar - Nosotros</title>;
+export const Head: HeadFC = () => (
+  <>
+    <html lang="es" />
+    <title>CER El Encinar - Nosotros</title>
+    <meta name="description" content="CER El Encinar" />
+  </>
+);

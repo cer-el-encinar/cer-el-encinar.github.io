@@ -79,4 +79,10 @@ export const query = graphql`
   }
 `;
 
-export const Head: HeadFC = () => <title>CER El Encinar</title>;
+export const Head: HeadFC = () => (
+  <>
+    <html lang="es" />
+    <title>CER El Encinar</title>
+    <meta name="description" content="CER El Encinar" />
+  </>
+);

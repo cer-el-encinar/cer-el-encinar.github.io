@@ -17,5 +17,9 @@ const NotFoundPage: React.FC<PageProps> = () => (
 export default NotFoundPage;
 
 export const Head: HeadFC = () => (
-  <title>CER El Encinar - Página no encontrada</title>
+  <>
+    <html lang="es" />
+    <title>CER El Encinar - Página no encontrada</title>
+    <meta name="description" content="CER El Encinar" />
+  </>
 );

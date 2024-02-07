@@ -27,4 +27,10 @@ const ContactoPage: React.FC<PageProps> = () => (
 
 export default ContactoPage;
 
-export const Head: HeadFC = () => <title>CER El Encinar - Contacto</title>;
+export const Head: HeadFC = () => (
+  <>
+    <html lang="es" />
+    <title>CER El Encinar - Contacto</title>
+    <meta name="description" content="CER El Encinar" />
+  </>
+);

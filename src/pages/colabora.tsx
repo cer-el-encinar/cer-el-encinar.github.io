@@ -95,4 +95,10 @@ const ColaboraPage: React.FC<PageProps> = () => (
 
 export default ColaboraPage;
 
-export const Head: HeadFC = () => <title>CER El Encinar - Colabora</title>;
+export const Head: HeadFC = () => (
+  <>
+    <html lang="es" />
+    <title>CER El Encinar - Colabora</title>
+    <meta name="description" content="CER El Encinar" />
+  </>
+);

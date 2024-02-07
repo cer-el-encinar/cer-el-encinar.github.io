@@ -42,5 +42,9 @@ export const query = graphql`
 `;
 
 export const Head: HeadFC = ({ data }) => (
-  <title>{(data as Data).mdx.frontmatter.title}</title>
+  <>
+    <html lang="es" />
+    <title>{(data as Data).mdx.frontmatter.title}</title>
+    <meta name="description" content="CER El Encinar" />
+  </>
 );
