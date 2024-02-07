@@ -5,7 +5,7 @@ import { Hero, Layout } from '../components';
 
 const NotFoundPage: React.FC<PageProps> = () => (
   <Layout>
-    <Hero>
+    <Hero notMarginTopOnMobile>
       <Hero.Title>Error 404 - Página no encontrada!</Hero.Title>
       <center>
         <Link to="/">Ir al inicio</Link>

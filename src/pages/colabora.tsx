@@ -11,7 +11,7 @@ import {
 
 const ColaboraPage: React.FC<PageProps> = () => (
   <Layout>
-    <Hero>
+    <Hero notMarginTopOnMobile>
       <Hero.Title>Colabora</Hero.Title>
     </Hero>
 

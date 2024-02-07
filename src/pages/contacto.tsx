@@ -7,7 +7,7 @@ import { social } from '../data';
 
 const ContactoPage: React.FC<PageProps> = () => (
   <Layout>
-    <Hero>
+    <Hero notMarginTopOnMobile>
       <Hero.Title>Contacto</Hero.Title>
     </Hero>
 

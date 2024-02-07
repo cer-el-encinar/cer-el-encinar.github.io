@@ -14,7 +14,7 @@ const NoticiasPage: React.FC<PageProps> = ({ data }) => {
   const news = (data as Data).allMdx.nodes;
   return (
     <Layout>
-      <Hero>
+      <Hero notMarginTopOnMobile>
         <Hero.Title>Noticias</Hero.Title>
       </Hero>
 

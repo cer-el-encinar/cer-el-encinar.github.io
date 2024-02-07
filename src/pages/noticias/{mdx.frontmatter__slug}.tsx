@@ -20,7 +20,7 @@ const NoticiaPage: React.FC<PageProps> = ({ data, children, location }) => {
   const img = getImage(frontmatter.cover) as IGatsbyImageData;
   return (
     <Layout>
-      <Hero>
+      <Hero notMarginTopOnMobile>
         <Hero.Title>{frontmatter.title}</Hero.Title>
       </Hero>
       <GatsbyImage

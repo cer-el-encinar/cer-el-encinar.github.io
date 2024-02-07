@@ -5,7 +5,7 @@ import { Contained, Hero, Layout, Statement } from '../components';
 
 const NosotrosPage: React.FC<PageProps> = () => (
   <Layout>
-    <Hero>
+    <Hero notMarginTopOnMobile>
       <Hero.Title>Nosotros</Hero.Title>
     </Hero>
 
