@@ -6,6 +6,7 @@ type Props = {
 };
 
 export const StyledHeader = styled.header<Props>`
+  font-family: 'Kalam', sans-serif;
   width: 100%;
   position: fixed;
   top: 0;

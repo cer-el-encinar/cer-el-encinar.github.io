@@ -16,7 +16,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Jost'],
+          families: ['Jost', 'Kalam'],
         },
       },
     },

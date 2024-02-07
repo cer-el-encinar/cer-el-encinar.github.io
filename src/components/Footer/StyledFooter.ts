@@ -12,6 +12,11 @@ export const StyledFooterContent = styled.div`
   max-width: 980px;
   margin: 0 auto;
   padding: 1rem 0;
+  @media screen and (max-width: 980px) {
+    & {
+      padding: 1rem;
+    }
+  }
   background: black;
   font-size: 1.2rem;
   color: #ccc;

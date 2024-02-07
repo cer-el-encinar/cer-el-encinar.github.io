@@ -16,7 +16,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   const news = (data as Data).allMdx.nodes;
   return (
     <Layout>
-      <Hero>
+      <Hero notMarginTopOnMobile>
         <Container>
           <Row nogutter>
             <Col sm={6} style={{ alignSelf: 'center', marginBottom: '4rem' }}>
@@ -25,7 +25,12 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
                 y Retorno (CER) de animales en el entorno de la urbanización del
                 Encinar del Alberche
               </p>
-              <Link to="/nosotros/">Cónocenos...</Link>
+              <Link
+                style={{ fontFamily: '"Kalam", sans-serif' }}
+                to="/nosotros/"
+              >
+                Cónocenos...
+              </Link>
             </Col>
             <Col sm={6} style={{ textAlign: 'center' }}>
               <StaticImage

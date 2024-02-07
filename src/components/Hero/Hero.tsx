@@ -6,10 +6,11 @@ import { Title } from './components';
 
 type Props = {
   children: React.ReactNode;
+  notMarginTopOnMobile?: boolean;
 };
 
-const $Hero: React.FC<Props> = ({ children }) => (
-  <StyledHero>
+const $Hero: React.FC<Props> = ({ children, notMarginTopOnMobile = false }) => (
+  <StyledHero notMarginTopOnMobile={notMarginTopOnMobile}>
     <Contained>{children}</Contained>
   </StyledHero>
 );

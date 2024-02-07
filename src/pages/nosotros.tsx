@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { type HeadFC, type PageProps } from 'gatsby';
+import { Link, type HeadFC, type PageProps } from 'gatsby';
 
 import { Contained, Hero, Layout, Statement } from '../components';
 
@@ -11,11 +11,11 @@ const NosotrosPage: React.FC<PageProps> = () => (
 
     <Contained>
       <Statement>
-        Somos una asociación que se dedica a la Captura, Esterilización y
-        Retorno (CER) de animales en el entorno de la urbanización del Encinar
-        del Alberche
+        Asociación CER EL ENCINAR esta formada por un grupo de vecinos y
+        colaboradores que trabajamos en el área de la Urbanización Encinar del
+        Alberche de Villa del Prado, siempre y cuando los medios y los
+        voluntarios puedan.
       </Statement>
-
       <p>
         ¡Bienvenido a "CER El Encinar"! Somos una asociación dedicada al cuidado
         y bienestar de los gatos en la encantadora urbanización del Encinar del
@@ -24,6 +24,11 @@ const NosotrosPage: React.FC<PageProps> = () => (
         (CER), una práctica que promueve el equilibrio y la armonía en las
         colonias gatunas que comparten nuestro hogar.
       </p>
+      <Statement>
+        No contamos con ninguna subvención oficial en este momento, asi que
+        todas nuestras intervenciones se financian con donaciones o
+        colaboraciones puntuales
+      </Statement>
 
       <h4>¿Quiénes somos en "CER El Encinar"?</h4>
       <p>
@@ -44,6 +49,33 @@ const NosotrosPage: React.FC<PageProps> = () => (
         felinas. Además, nos esforzamos por proporcionar atención médica,
         alimento y refugio, mejorando así la calidad de vida de nuestros amigos
         de cuatro patas.
+      </p>
+
+      <h4>Actualmente realizamos</h4>
+      <p>
+        <ul>
+          <li>Castraciones y retornos de gatos a sus colonias.</li>
+          <li>Gestión de colonias Ferales censadas. </li>
+          <li>
+            Protección de colonias ya establecidas en puntos autogestionables. (
+            evitando la alimentación indiscriminada en zonas publicas).
+          </li>
+          <li>
+            Marcaciones de espacios protegidos (actualmente solo en zonas
+            privadas).
+          </li>
+          <li>
+            Banco de alimentos para colonias mediante donaciones particulares,
+            asociaciones o empresas.
+          </li>
+          <li>Cuidado de gatos enfermos de las colonias gestionadas.</li>
+          <li>Adopciones responsables de gatos de las colonias.</li>
+          <li>Acuerdos veterinarios con entidades privadas.</li>
+          <li>Asesoramiento Legal y denuncias sobre maltrato animal.</li>
+          <li>Autofinancionaciones y Donaciones.</li>
+          <li>Cursos , Asesoramiento y campañas de concienciación.</li>
+          <li>Hogares de acogida temporales.</li>
+        </ul>
       </p>
 
       <h4>¿Cómo Implementamos el Método CER en "CER El Encinar"?</h4>
@@ -68,11 +100,10 @@ const NosotrosPage: React.FC<PageProps> = () => (
         ser parte de nuestra historia!
       </p>
 
-      <p>
+      <Link to="/colabora/">
         ¡Únete a nosotros y sé el héroe que nuestras adorables colonias felinas
         necesitan!
-      </p>
-      <br />
+      </Link>
     </Contained>
   </Layout>
 );

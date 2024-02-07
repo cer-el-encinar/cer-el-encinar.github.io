@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-
-import { Social } from '../Social';
+import { Col, Container, Row } from 'react-grid-system';
 
 import {
   StyledFooter,
@@ -9,6 +8,7 @@ import {
   StyledFooterContent,
   StyledFooterImage,
 } from './StyledFooter';
+import { social } from '../../data';
 
 export const Footer: React.FC = () => (
   <StyledFooter>
@@ -31,7 +31,35 @@ export const Footer: React.FC = () => (
           </a>
         </div>
         <br />
-        <Social inFooter />
+        <Container>
+          <Row>
+            {social.map(({ url, Icon, label }) => (
+              <Col
+                key={url}
+                md={4}
+                style={{
+                  marginBottom: '1rem',
+                  display: 'flex',
+                  justifyContent: 'center',
+                }}
+              >
+                <a
+                  href={url}
+                  target="_blank"
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    gap: '.5rem',
+                  }}
+                >
+                  <Icon />
+                  {label}
+                </a>
+              </Col>
+            ))}
+          </Row>
+        </Container>
         <br />
         <p style={{ textAlign: 'center' }}>&copy; CER El Encinar</p>
       </StyledFooterContent>
