@@ -7,5 +7,6 @@ export * from './Hero';
 export * from './Layout';
 export * from './Donations';
 export * from './NewsTop3';
+export * from './Share';
 export * from './Social';
 export * from './Statement';
