@@ -3,7 +3,6 @@ import * as React from 'react';
 import { StyledLayout } from './StyledLayout';
 import { Header } from '../Header';
 
-import '../../styles/style.scss';
 import { Footer } from '../Footer';
 
 type Props = {
