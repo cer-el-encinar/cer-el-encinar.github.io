@@ -1,6 +1,7 @@
 export * from './CallToAction';
 export * from './Card';
 export * from './Contained';
+export * from './Cookies';
 export * from './Footer';
 export * from './Header';
 export * from './Hero';
