@@ -1,17 +1,18 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import { useScroll } from 'ahooks';
 
 import {
   StyledHeader,
   StyledHeaderInner,
   StyledHeaderMobile,
 } from './StyledHeader';
-import { useScroll } from '../../hook';
 import { Menu, MenuButton } from './components';
 
 export const Header = () => {
-  const { hasScrolled } = useScroll();
+  const position = useScroll(window?.document);
+  const hasScrolled = (position?.top ?? 0) > 0;
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <StyledHeader $hasScrolled={hasScrolled} isOpen={isOpen}>
