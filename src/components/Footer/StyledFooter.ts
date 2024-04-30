@@ -25,6 +25,7 @@ export const StyledFooterContent = styled.div`
     &:hover {
       color: white;
     }
+    text-decoration: underline;
   }
 
   ul {

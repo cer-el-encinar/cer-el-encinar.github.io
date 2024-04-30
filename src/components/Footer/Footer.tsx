@@ -9,6 +9,7 @@ import {
   StyledFooterImage,
 } from './StyledFooter';
 import { social } from '../../data';
+import { Link } from 'gatsby';
 
 export const Footer: React.FC = () => (
   <StyledFooter>
@@ -61,7 +62,13 @@ export const Footer: React.FC = () => (
           </Row>
         </Container>
         <br />
-        <p style={{ textAlign: 'center' }}>&copy; CER El Encinar</p>
+        <p style={{ textAlign: 'center' }}>
+          <Link to={'/terminos'}>Términos y condiciones</Link>&nbsp;|&nbsp;
+          <Link to={'/privacidad'}>Política de privacidad</Link>
+          <br />
+          <br />
+          &copy; CER El Encinar
+        </p>
       </StyledFooterContent>
     </StyledFooterBottom>
   </StyledFooter>
