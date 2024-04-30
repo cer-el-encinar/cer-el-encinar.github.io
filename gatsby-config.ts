@@ -1,7 +1,6 @@
 import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
-  pathPrefix: '/website',
   siteMetadata: {
     title: 'CER El Encinar',
     siteUrl: 'https://cerelencinar.org',
