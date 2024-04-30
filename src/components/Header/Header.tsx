@@ -11,7 +11,9 @@ import {
 import { Menu, MenuButton } from './components';
 
 export const Header = () => {
-  const position = useScroll(window?.document);
+  const position = useScroll(
+    typeof window !== 'undefined' ? window?.document : null,
+  );
   const hasScrolled = (position?.top ?? 0) > 0;
   const [isOpen, setIsOpen] = React.useState(false);
   return (
