@@ -13,26 +13,9 @@ const heroBlock: Template = {
   fields: [
     { name: 'text', label: 'Text', type: 'rich-text' },
     { name: 'imgSrc', label: 'Image', type: 'image' },
-    {
-      name: 'links',
-      label: 'Links',
-      type: 'object',
-      list: true,
-      fields: [
-        { type: 'string', name: 'url' },
-        { type: 'string', name: 'label' },
-        {
-          type: 'string',
-          name: 'style',
-          options: ['primary', 'regular'],
-        },
-      ],
-    },
-    {
-      name: 'id',
-      label: 'ID',
-      type: 'string',
-    },
+    { name: 'url', label: 'URL', type: 'string' },
+    { name: 'button', label: 'Button', type: 'string' },
+    { name: 'id', label: 'ID', type: 'string' },
   ],
   ui: {
     itemProps: (item) => ({ label: `Hero: ${item?.id}` }),

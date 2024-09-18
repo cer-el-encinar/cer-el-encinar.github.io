@@ -50,7 +50,8 @@ export const PageBlock: React.FC<Props> = ({
             <HeroBlock
               imgSrc={block.imgSrc as string}
               text={block.text}
-              links={block.links as { label: string; url: string }[]}
+              url={block.url as string}
+              button={block.button as string}
               id={key}
             />
           </div>
