@@ -25,6 +25,7 @@
         "src/data/index"
       ]
     },
+    "baseUrl": "./",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
