@@ -1,7 +1,3 @@
-import * as React from 'react';
-
-import { StyledImage } from './StyledImage';
-
 interface Props {
   children: React.ReactNode;
   padding?: string;
@@ -13,7 +9,10 @@ export const Image: React.FC<Props> = ({
   padding,
   cover = false,
 }) => (
-  <StyledImage style={{ padding }} cover={cover}>
+  <div
+    className={`relative min-h-[150px] ${!cover && 'h-38 flex items-center justify-center '}`}
+    style={{ padding }}
+  >
     {children}
-  </StyledImage>
+  </div>
 );

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import {
   EmailIcon,
   EmailShareButton,
@@ -12,14 +11,12 @@ import {
   XIcon,
 } from 'react-share';
 
-import { StyledShare } from './StyledShare';
-
 type Props = {
   uri: string;
 };
 
 export const Share: React.FC<Props> = ({ uri }) => (
-  <StyledShare>
+  <div className="py-1 px-0 font-featured text-4xl text-center my-2 mx-0">
     <p>Difunde la noticia</p>
     <FacebookShareButton url={uri}>
       <FacebookIcon />
@@ -36,5 +33,5 @@ export const Share: React.FC<Props> = ({ uri }) => (
     <EmailShareButton url={uri}>
       <EmailIcon />
     </EmailShareButton>
-  </StyledShare>
+  </div>
 );

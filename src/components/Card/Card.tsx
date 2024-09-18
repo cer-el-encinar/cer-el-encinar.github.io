@@ -1,6 +1,3 @@
-import * as React from 'react';
-
-import { StyledCard } from './StyledCard';
 import { Title, Content, Image } from './components';
 
 interface Props {
@@ -8,7 +5,9 @@ interface Props {
 }
 
 const $Card: React.FC<Props> = ({ children }) => (
-  <StyledCard>{children}</StyledCard>
+  <div className="flex flex-col h-full bg-white shadow-ground hover:shadow-elevated hover:scale-105 rounded-md mb-1 overflow-hidden transition-all duration-200">
+    {children}
+  </div>
 );
 
 export const Card = $Card as typeof $Card & {

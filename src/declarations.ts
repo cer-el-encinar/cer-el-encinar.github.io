@@ -1,12 +1,22 @@
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import { type TinaMarkdownContent } from 'tinacms/dist/rich-text';
 
-export type News = {
-  frontmatter: {
-    cover: IGatsbyImageData;
-    date: string;
-    title: string;
-    slug: string;
-  };
-  excerpt: string;
-  body: string;
-};
+export interface IDonation {
+  title?: string | undefined;
+  description?: string | undefined;
+  url?: string | undefined;
+  image?: string | undefined;
+}
+
+export interface ISocial {
+  title?: string | undefined;
+  icon?: string | undefined;
+  url?: string | undefined;
+}
+
+export interface IPost {
+  title?: string | undefined;
+  body?: TinaMarkdownContent | TinaMarkdownContent[];
+  cover?: string | null | undefined;
+  slug?: string | undefined;
+  date?: string | undefined;
+}

@@ -1,11 +1,9 @@
-import * as React from 'react';
-
-import { StyledTitle } from './StyledTitle';
-
 interface Props {
   children: React.ReactNode;
 }
 
 export const Title: React.FC<Props> = ({ children }) => (
-  <StyledTitle>{children}</StyledTitle>
+  <div className="font-featured text-2xl my-1 mx-0 font-bold py-3 px-3">
+    {children}
+  </div>
 );
