@@ -13,6 +13,7 @@ import { HeroBlock } from '../HeroBlock';
 import { CallToActionBlock } from '../CallToActionBlock';
 import { SocialsBlock } from '../SocialsBlock';
 import { SpacingBlock } from '../SpacingBlock';
+import { MessageBoxBlock } from '../MessageBoxBlock';
 
 interface Props {
   data: PageQuery;
@@ -75,6 +76,10 @@ export const PageBlock: React.FC<Props> = ({
         ) : block?.__typename === 'PageBlocksCta' ? (
           <Contained key={key} data-tina-field={tinaField(block, 'text')}>
             <CallToActionBlock content={block.text} />
+          </Contained>
+        ) : block?.__typename === 'PageBlocksMessageBox' ? (
+          <Contained key={key} data-tina-field={tinaField(block, 'text')}>
+            <MessageBoxBlock type={block.type} text={block.text} />
           </Contained>
         ) : block?.__typename === 'PageBlocksSpacing' ? (
           <div key={key} data-tina-field={tinaField(block, 'size')}>

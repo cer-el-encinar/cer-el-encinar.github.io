@@ -7,4 +7,5 @@ export * from './Header';
 export * from './Hero';
 export * from './Menu';
 export * from './MenuButton';
+export * from './MessageBox';
 export * from './Share';

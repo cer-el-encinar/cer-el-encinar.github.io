@@ -9,6 +9,12 @@ const config: Config = {
       body: '#ccc',
       black: '#000',
       white: '#fff',
+      'amber-700': 'rgb(180,83,9)',
+      'amber-200': 'rgb(253 230 138)',
+      'sky-700': 'rgb(3 105 161)',
+      'sky-200': 'rgb(186 230 253)',
+      'rose-700': 'rgb(190 18 60)',
+      'rose-200': 'rgb(254 205 211)',
     },
     fontFamily: {
       regular: ['var(--font-regular)', 'sans-serif'],

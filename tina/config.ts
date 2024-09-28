@@ -139,6 +139,27 @@ const spacingBlock: Template = {
   },
 };
 
+const messageBox: Template = {
+  name: 'messageBox',
+  label: 'Message Box',
+  fields: [
+    {
+      name: 'type',
+      label: 'Type',
+      type: 'string',
+      options: [
+        { value: 'info', label: 'Info' },
+        { value: 'warning', label: 'Warning' },
+        { value: 'danger', label: 'Danger' },
+      ],
+    },
+    { name: 'text', label: 'Text', type: 'rich-text' },
+  ],
+  ui: {
+    itemProps: (item) => ({ label: `Message Box: ${item?.type}` }),
+  },
+};
+
 export default defineConfig({
   branch,
 
@@ -275,6 +296,7 @@ export default defineConfig({
               callToActionBlock,
               socialsBlock,
               spacingBlock,
+              messageBox,
             ],
           },
         ],

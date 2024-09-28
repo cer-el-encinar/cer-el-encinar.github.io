@@ -27,3 +27,5 @@ export interface IWiki {
   filename: string;
   relativePath: string;
 }
+
+export type TMessageBoxType = 'info' | 'warning' | 'danger';
