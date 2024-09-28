@@ -4,3 +4,4 @@ public/*
 !public/uploads
 node_modules
 .env
+out
