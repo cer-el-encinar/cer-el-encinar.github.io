@@ -8,4 +8,4 @@ const playpen = Playpen_Sans({
   variable: '--font-featured',
 });
 
-export const fontClassNames = `${playpen.className} ${jost.className}`;
+export const fontClassNames = `${playpen.variable} ${jost.variable}`;
