@@ -1,6 +1,6 @@
 interface Props {
   children: React.ReactNode;
-  onClick: () => void;
+  onClick: (event?: React.MouseEvent) => void;
 }
 
 export const Button: React.FC<Props> = ({ children, onClick }) => (

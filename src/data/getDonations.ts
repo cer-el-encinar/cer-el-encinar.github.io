@@ -8,5 +8,6 @@ export async function getDonations(): Promise<IDonation[] | undefined> {
     description: donation?.node?.description,
     url: donation?.node?.url,
     image: donation?.node?.image,
+    infoUrl: donation?.node?.infoUrl,
   }));
 }

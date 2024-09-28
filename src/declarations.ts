@@ -5,6 +5,7 @@ export interface IDonation {
   description?: string | undefined;
   url?: string | undefined;
   image?: string | undefined;
+  infoUrl?: string | null | undefined;
 }
 
 export interface ISocial {

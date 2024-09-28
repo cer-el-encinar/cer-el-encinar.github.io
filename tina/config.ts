@@ -315,6 +315,12 @@ export default defineConfig({
             label: 'Image',
             required: true,
           },
+          {
+            type: 'string',
+            name: 'infoUrl',
+            label: 'Info URL',
+            required: false,
+          },
         ],
       },
     ],
