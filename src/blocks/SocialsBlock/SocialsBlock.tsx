@@ -8,11 +8,15 @@ import { tinaField } from 'tinacms/dist/react';
 
 import { Contained } from '@components';
 import type { ISocial } from '@declarations';
-import type { PageBlocksSocials, PostBlocksSocials } from '@tina/types';
+import type {
+  PageBlocksSocials,
+  PostBlocksSocials,
+  WikiBlocksSocials,
+} from '@tina/types';
 
 interface Props {
   socials: ISocial[] | undefined;
-  block: PageBlocksSocials | PostBlocksSocials;
+  block: PageBlocksSocials | PostBlocksSocials | WikiBlocksSocials;
 }
 
 type TIcon = 'FaFacebook' | 'FaInstagram' | 'FaEnvelope';
