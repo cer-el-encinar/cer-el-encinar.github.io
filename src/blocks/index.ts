@@ -6,5 +6,7 @@ export * from './LatestPostsBlock';
 export * from './PageBlock';
 export * from './PostBlock';
 export * from './SocialsBlock';
+export * from './SpacingBlock';
+export * from './TOCBlock';
 export * from './TextBlock';
 export * from './WikiBlock';

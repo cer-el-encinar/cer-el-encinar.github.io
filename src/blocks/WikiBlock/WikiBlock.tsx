@@ -14,6 +14,7 @@ import { CallToActionBlock } from '../CallToActionBlock';
 import { SocialsBlock } from '../SocialsBlock';
 import { TOCBlock } from '../TOCBlock';
 import { getPath } from '@toc';
+import { SpacingBlock } from '../SpacingBlock';
 
 interface Props {
   data: WikiQuery;
@@ -85,6 +86,10 @@ export const WikiBlock: React.FC<Props> = ({
           <Contained key={key} data-tina-field={tinaField(block, 'id')}>
             <TOCBlock wikis={wikis as IWiki[]} />
           </Contained>
+        ) : block?.__typename === 'WikiBlocksSpacing' ? (
+          <div key={key} data-tina-field={tinaField(block, 'size')}>
+            <SpacingBlock size={String(block.size)} />
+          </div>
         ) : block?.__typename === 'WikiBlocksSocials' ? (
           <div key={key}>
             <SocialsBlock socials={socials} block={block} />

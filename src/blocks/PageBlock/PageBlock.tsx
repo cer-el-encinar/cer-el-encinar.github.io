@@ -12,6 +12,7 @@ import { TextBlock } from '../TextBlock';
 import { HeroBlock } from '../HeroBlock';
 import { CallToActionBlock } from '../CallToActionBlock';
 import { SocialsBlock } from '../SocialsBlock';
+import { SpacingBlock } from '../SpacingBlock';
 
 interface Props {
   data: PageQuery;
@@ -75,6 +76,10 @@ export const PageBlock: React.FC<Props> = ({
           <Contained key={key} data-tina-field={tinaField(block, 'text')}>
             <CallToActionBlock content={block.text} />
           </Contained>
+        ) : block?.__typename === 'PageBlocksSpacing' ? (
+          <div key={key} data-tina-field={tinaField(block, 'size')}>
+            <SpacingBlock size={String(block.size)} />
+          </div>
         ) : block?.__typename === 'PageBlocksSocials' ? (
           <div key={key}>
             <SocialsBlock socials={socials} block={block} />

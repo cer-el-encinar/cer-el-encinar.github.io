@@ -119,6 +119,26 @@ const socialsBlock: Template = {
   },
 };
 
+const spacingBlock: Template = {
+  name: 'spacing',
+  label: 'Spacing',
+  fields: [
+    {
+      name: 'size',
+      label: 'Size',
+      type: 'string',
+      options: [
+        { value: 'h-2', label: 'Small' },
+        { value: 'h-8', label: 'Medium' },
+        { value: 'h-16', label: 'Big' },
+      ],
+    },
+  ],
+  ui: {
+    itemProps: (item) => ({ label: `Spacing: ${item?.size}` }),
+  },
+};
+
 export default defineConfig({
   branch,
 
@@ -176,6 +196,7 @@ export default defineConfig({
               headingBlock,
               callToActionBlock,
               socialsBlock,
+              spacingBlock,
             ],
           },
         ],
@@ -213,6 +234,7 @@ export default defineConfig({
               headingBlock,
               callToActionBlock,
               socialsBlock,
+              spacingBlock,
             ],
           },
         ],
@@ -252,6 +274,7 @@ export default defineConfig({
               headingBlock,
               callToActionBlock,
               socialsBlock,
+              spacingBlock,
             ],
           },
         ],

@@ -13,6 +13,7 @@ import { TextBlock } from '../TextBlock';
 import { HeroBlock } from '../HeroBlock';
 import { CallToActionBlock } from '../CallToActionBlock';
 import { SocialsBlock } from '../SocialsBlock';
+import { SpacingBlock } from '../SpacingBlock';
 
 interface Props {
   data: PostQuery;
@@ -56,7 +57,8 @@ export const PostBlock: React.FC<Props> = ({
             <HeroBlock
               imgSrc={block.imgSrc as string}
               text={block.text}
-              links={block.links as { label: string; url: string }[]}
+              button={String(block.button)}
+              url={String(block.url)}
               id={key}
             />
           </div>
@@ -80,6 +82,10 @@ export const PostBlock: React.FC<Props> = ({
           <Contained key={key} data-tina-field={tinaField(block, 'text')}>
             <CallToActionBlock content={block.text} />
           </Contained>
+        ) : block?.__typename === 'PostBlocksSpacing' ? (
+          <div key={key} data-tina-field={tinaField(block, 'size')}>
+            <SpacingBlock size={String(block.size)} />
+          </div>
         ) : block?.__typename === 'PostBlocksSocials' ? (
           <div key={key}>
             <SocialsBlock socials={socials} block={block} />
