@@ -7,3 +7,4 @@ export * from './PageBlock';
 export * from './PostBlock';
 export * from './SocialsBlock';
 export * from './TextBlock';
+export * from './WikiBlock';

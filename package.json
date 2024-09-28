@@ -13,6 +13,7 @@
   "dependencies": {
     "ahooks": "^3.8.1",
     "next": "^14.2.12",
+    "radashi": "^12.1.0",
     "react": "^18.3.1",
     "react-cookie": "^7.2.0",
     "react-dom": "^18.3.1",

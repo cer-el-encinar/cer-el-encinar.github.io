@@ -23,6 +23,9 @@
       ],
       "@data": [
         "src/data/index"
+      ],
+      "@toc": [
+        "src/toc/index"
       ]
     },
     "baseUrl": "./",

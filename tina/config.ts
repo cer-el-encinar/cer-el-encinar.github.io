@@ -31,6 +31,15 @@ const donationsBlock: Template = {
   },
 };
 
+const tocBlock: Template = {
+  name: 'toc',
+  label: 'TOC',
+  fields: [{ type: 'string', name: 'id', label: 'ID' }],
+  ui: {
+    itemProps: (item) => ({ label: `TOC: ${item?.id}` }),
+  },
+};
+
 const latestPostsBlock: Template = {
   name: 'latestPosts',
   label: 'Latest Posts',
@@ -133,6 +142,44 @@ export default defineConfig({
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
+      {
+        name: 'wiki',
+        label: 'Wiki',
+        path: 'content/wiki',
+        format: 'mdx',
+        ui: {
+          router: (props) =>
+            `/wiki/${props.document._sys.relativePath.substring(
+              0,
+              props.document._sys.relativePath.length - 4
+            )}`,
+        },
+        fields: [
+          {
+            type: 'string',
+            name: 'title',
+            label: 'Title',
+            isTitle: true,
+            required: true,
+          },
+          {
+            name: 'blocks',
+            label: 'Blocks',
+            type: 'object',
+            list: true,
+            templates: [
+              tocBlock,
+              heroBlock,
+              donationsBlock,
+              textBlock,
+              latestPostsBlock,
+              headingBlock,
+              callToActionBlock,
+              socialsBlock,
+            ],
+          },
+        ],
+      },
       {
         name: 'post',
         label: 'Posts',

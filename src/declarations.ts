@@ -20,3 +20,9 @@ export interface IPost {
   slug?: string | undefined;
   date?: string | undefined;
 }
+
+export interface IWiki {
+  title: string;
+  filename: string;
+  relativePath: string;
+}

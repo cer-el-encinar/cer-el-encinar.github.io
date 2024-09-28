@@ -1,7 +1,7 @@
 import { getImageProps } from 'next/image';
 
 import { Contained } from '../Contained';
-import { Title } from './components';
+import { Subtitle, Title } from './components';
 import BgImage from './bg.png';
 
 type Props = {
@@ -43,8 +43,10 @@ const $Hero: React.FC<Props> = ({ children, small = false }) => {
 
 export const Hero = $Hero as typeof $Hero & {
   Title: typeof Title;
+  Subtitle: typeof Subtitle;
 };
 
 Hero.Title = Title;
+Hero.Subtitle = Subtitle;
 
 Hero.displayName = 'Hero';
