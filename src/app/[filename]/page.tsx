@@ -5,25 +5,25 @@ import { getDonations, getLatestPosts, getSocials } from '@data';
 export async function generateStaticParams() {
   const pages = await client.queries.pageConnection();
   const paths = pages.data?.pageConnection?.edges?.map((edge) => ({
-    slug: edge?.node?.slug,
+    filename: edge?.node?._sys?.filename,
   }));
 
   return paths || [];
 }
 
-export default async ({ params }: { params: { slug: string } }) => {
+export default async ({ params }: { params: { filename: string } }) => {
   const donations = await getDonations();
   const socials = await getSocials();
   const latestPosts = await getLatestPosts();
   const result = await client.queries.page({
-    relativePath: `${params.slug}.mdx`,
+    relativePath: `${params.filename}.mdx`,
   });
   return (
     <PageBlock
       donations={donations}
       socials={socials}
       latestPosts={latestPosts}
-      showTitle={params.slug !== 'home'}
+      showTitle={params.filename !== 'home'}
       {...result}
     />
   );

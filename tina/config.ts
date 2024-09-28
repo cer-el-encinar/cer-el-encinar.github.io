@@ -239,7 +239,6 @@ export default defineConfig({
             isTitle: true,
             required: true,
           },
-          { type: 'string', name: 'slug', label: 'Slug', required: true },
           { type: 'image', name: 'cover', label: 'Cover' },
           { type: 'datetime', name: 'date', label: 'Date', required: true },
           {
@@ -274,12 +273,6 @@ export default defineConfig({
             name: 'title',
             label: 'Title',
             isTitle: true,
-            required: true,
-          },
-          {
-            type: 'string',
-            name: 'slug',
-            label: 'Slug',
             required: true,
           },
           {

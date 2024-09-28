@@ -8,7 +8,7 @@ export default async () => {
   const { data } = await client.queries.postConnection();
   const posts = data?.postConnection?.edges?.map((post) => ({
     title: post?.node?.title,
-    slug: post?.node?.slug,
+    filename: post?.node?._sys?.filename,
     cover: post?.node?.cover,
   }));
   return (
@@ -20,8 +20,8 @@ export default async () => {
       <Contained spaced>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts?.map((post) => (
-            <div key={post.slug} className="mb-2">
-              <Link href={`/noticias/${post.slug}/`}>
+            <div key={post.filename} className="mb-2">
+              <Link href={`/noticias/${post.filename}/`}>
                 <Card>
                   <Card.Image cover>
                     <div className="relative w-full h-[250px]">
