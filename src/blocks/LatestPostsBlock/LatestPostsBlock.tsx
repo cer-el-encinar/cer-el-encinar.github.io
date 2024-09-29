@@ -11,8 +11,8 @@ interface Props {
 export const LatestPostsBlock: React.FC<Props> = ({ latestPosts }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     {latestPosts?.map((post) => (
-      <div key={post.slug} className="mb-2">
-        <Link href={`/noticias/${post.slug}/`}>
+      <div key={post.filename} className="mb-2">
+        <Link href={`/noticias/${post.filename}/`}>
           <Card>
             <Card.Image cover>
               <Image

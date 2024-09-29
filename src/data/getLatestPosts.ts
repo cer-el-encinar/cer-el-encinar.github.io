@@ -6,8 +6,8 @@ export async function getLatestPosts(): Promise<IPost[] | undefined> {
   return data?.postConnection?.edges?.map((post) => ({
     title: post?.node?.title,
     date: post?.node?.date,
-    slug: post?.node?.slug,
     blocks: post?.node?.blocks,
     cover: post?.node?.cover,
+    filename: post?.node?._sys?.filename,
   }));
 }

@@ -18,8 +18,8 @@ export interface IPost {
   title?: string | undefined;
   body?: TinaMarkdownContent | TinaMarkdownContent[];
   cover?: string | null | undefined;
-  slug?: string | undefined;
   date?: string | undefined;
+  filename?: string | undefined;
 }
 
 export interface IWiki {
