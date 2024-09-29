@@ -139,7 +139,7 @@ const spacingBlock: Template = {
   },
 };
 
-const messageBox: Template = {
+const messageBoxBlock: Template = {
   name: 'messageBox',
   label: 'Message Box',
   fields: [
@@ -218,6 +218,7 @@ export default defineConfig({
               callToActionBlock,
               socialsBlock,
               spacingBlock,
+              messageBoxBlock,
             ],
           },
         ],
@@ -255,6 +256,7 @@ export default defineConfig({
               callToActionBlock,
               socialsBlock,
               spacingBlock,
+              messageBoxBlock,
             ],
           },
         ],
@@ -289,7 +291,7 @@ export default defineConfig({
               callToActionBlock,
               socialsBlock,
               spacingBlock,
-              messageBox,
+              messageBoxBlock,
             ],
           },
         ],

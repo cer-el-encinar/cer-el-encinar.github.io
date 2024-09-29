@@ -205,6 +205,17 @@ ol {
 }
 ul li,
 ol li {
+  margin-bottom: 0.5rem;
+}
+ul li {
   list-style: disc;
   margin-bottom: 0.5rem;
+}
+ol li {
+  list-style: decimal;
+  margin-bottom: 0.5rem;
+}
+
+strong, b {
+  font-weight: bold;
 }
