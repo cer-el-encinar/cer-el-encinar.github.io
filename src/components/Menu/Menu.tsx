@@ -35,7 +35,7 @@ export const Menu: React.FC<Props> = ({ isOpen, hasScrolled, afterClick }) => (
               src={Logo}
               alt="CER El Encinar"
               className={`transition-all duration-200 ${
-                hasScrolled && 'scale-50'
+                hasScrolled && 'scale-75'
               }`}
               width={120}
               height={120}
