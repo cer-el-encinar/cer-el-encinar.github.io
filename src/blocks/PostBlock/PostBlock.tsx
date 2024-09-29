@@ -84,7 +84,9 @@ export const PostBlock: React.FC<Props> = ({
           </Contained>
         ) : block?.__typename === 'PostBlocksSpacing' ? (
           <div key={key} data-tina-field={tinaField(block, 'size')}>
-            <SpacingBlock size={String(block.size)} />
+            <SpacingBlock
+              size={String(block.size) as 'small' | 'medium' | 'large'}
+            />
           </div>
         ) : block?.__typename === 'PostBlocksSocials' ? (
           <div key={key}>

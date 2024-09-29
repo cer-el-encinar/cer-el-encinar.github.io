@@ -128,9 +128,9 @@ const spacingBlock: Template = {
       label: 'Size',
       type: 'string',
       options: [
-        { value: 'h-2', label: 'Small' },
-        { value: 'h-8', label: 'Medium' },
-        { value: 'h-16', label: 'Big' },
+        { value: 'small', label: 'Small' },
+        { value: 'medium', label: 'Medium' },
+        { value: 'large', label: 'Large' },
       ],
     },
   ],

@@ -88,7 +88,9 @@ export const WikiBlock: React.FC<Props> = ({
           </Contained>
         ) : block?.__typename === 'WikiBlocksSpacing' ? (
           <div key={key} data-tina-field={tinaField(block, 'size')}>
-            <SpacingBlock size={String(block.size)} />
+            <SpacingBlock
+              size={String(block.size) as 'small' | 'medium' | 'large'}
+            />
           </div>
         ) : block?.__typename === 'WikiBlocksSocials' ? (
           <div key={key}>

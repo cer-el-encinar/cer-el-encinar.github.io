@@ -1,7 +1,13 @@
 interface Props {
-  size: string;
+  size: 'small' | 'medium' | 'large';
 }
 
 export const SpacingBlock: React.FC<Props> = ({ size }) => (
-  <div className={size} />
+  <div
+    className={`
+${size === 'small' ? 'h-6' : ''}
+${size === 'medium' ? 'h-12' : ''}
+${size === 'large' ? 'h-24' : ''}
+`}
+  />
 );

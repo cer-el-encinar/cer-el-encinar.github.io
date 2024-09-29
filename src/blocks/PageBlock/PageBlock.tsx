@@ -83,7 +83,9 @@ export const PageBlock: React.FC<Props> = ({
           </Contained>
         ) : block?.__typename === 'PageBlocksSpacing' ? (
           <div key={key} data-tina-field={tinaField(block, 'size')}>
-            <SpacingBlock size={String(block.size)} />
+            <SpacingBlock
+              size={String(block.size) as 'small' | 'medium' | 'large'}
+            />
           </div>
         ) : block?.__typename === 'PageBlocksSocials' ? (
           <div key={key}>
