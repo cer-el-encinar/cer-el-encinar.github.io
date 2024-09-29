@@ -42,7 +42,7 @@ export const WikiBlock: React.FC<Props> = ({
       {showTitle && (
         <Hero small>
           <Hero.Title data-tina-field={tinaField(data?.wiki, 'title')}>
-            {data.wiki.title}
+            <h1>{data.wiki.title}</h1>
             {path.length > 0 && (
               <Hero.Subtitle>
                 {path.map((chunk) => capitalize(title(chunk))).join(' / ')}

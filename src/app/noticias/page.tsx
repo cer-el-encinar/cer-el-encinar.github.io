@@ -14,7 +14,9 @@ export default async () => {
   return (
     <>
       <Hero small>
-        <Hero.Title>Noticias</Hero.Title>
+        <Hero.Title>
+          <h1>Noticias</h1>
+        </Hero.Title>
       </Hero>
 
       <Contained spaced>

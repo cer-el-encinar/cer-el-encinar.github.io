@@ -37,7 +37,7 @@ export const PostBlock: React.FC<Props> = ({
     <>
       <Hero small>
         <Hero.Title data-tina-field={tinaField(data?.post, 'title')}>
-          {data.post.title}
+          <h1>{data.post.title}</h1>
         </Hero.Title>
       </Hero>
 

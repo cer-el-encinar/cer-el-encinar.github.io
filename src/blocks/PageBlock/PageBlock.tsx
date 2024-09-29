@@ -40,7 +40,7 @@ export const PageBlock: React.FC<Props> = ({
       {showTitle && (
         <Hero small>
           <Hero.Title data-tina-field={tinaField(data?.page, 'title')}>
-            {data.page.title}
+            <h1>{data.page.title}</h1>
           </Hero.Title>
         </Hero>
       )}
