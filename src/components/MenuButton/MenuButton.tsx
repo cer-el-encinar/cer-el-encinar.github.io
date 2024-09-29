@@ -15,7 +15,7 @@ after:block after:bg-primary after:absolute after:h-[4px] after:w-[60px] after:t
 before:content-[''] before:mt-[-16px]
 after:content-[''] after:mt-[16px] ${
         isOpen &&
-        'before:mt-1 before:rotate-[405deg] bg-white after:mt-1 after:rotate-[-405deg]'
+        'before:translate-y-[16px] before:rotate-[405deg] bg-white after:translate-y-[-16px] after:rotate-[-405deg]'
       }`}
     />
   </div>
