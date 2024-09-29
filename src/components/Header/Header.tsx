@@ -28,7 +28,7 @@ export const Header = () => {
           hasScrolled ? 'lg:my-0' : 'lg:my-[2rem]'
         }`}
       >
-        <nav className={isOpen ? 'mb-12 lg:mb-0' : ''}>
+        <nav className={isOpen ? 'mb-0 lg:mb-0' : ''}>
           <div className="flex px-8 items-center justify-between lg:hidden min-h-[128px]">
             <Link
               href="/"

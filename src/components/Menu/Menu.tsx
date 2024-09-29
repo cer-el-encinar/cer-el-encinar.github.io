@@ -22,15 +22,15 @@ export const Menu: React.FC<Props> = ({ isOpen, hasScrolled, afterClick }) => (
   <ul
     className={`grid-rows-4 grid-cols-1 mb-2 items-center justify-center ${
       isOpen ? 'grid' : 'hidden'
-    } lg:grid lg:grid-rows-1 lg:grid-cols-[repeat(6,auto)]`}
+    } lg:grid lg:grid-rows-1 lg:grid-cols-[1fr_repeat(5,auto)]`}
   >
     {links.map((link, idx) =>
       link.href === '/' ? (
         <li
-          className="list-none m-0 p-0 hidden lg:inline-block px-6"
+          className="list-none m-0 p-0 hidden lg:inline-block px-6 items-start"
           key={link.href}
         >
-          <Link href="/" className="flex justify-center">
+          <Link href="/" className="inline-block">
             <Image
               src={Logo}
               alt="CER El Encinar"
@@ -49,7 +49,7 @@ export const Menu: React.FC<Props> = ({ isOpen, hasScrolled, afterClick }) => (
         >
           <Link
             href={link.href}
-            className={`text-4xl ${
+            className={`text-2xl ${
               idx !== links.length - 1 &&
               'border-b border-[rgba(0,0,0,0.1)] border-solid lg:border-none'
             } p-0 m-0 w-full h-full flex justify-center items-center px-4`}
